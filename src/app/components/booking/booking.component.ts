@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-// import { Location } from '@angular/common';
+import { BookingService } from '../../services/booking/booking.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 
 export class BookingComponent {
-  product: any = {
+    product: any = {
     category: "",
     title: "",
     description: "",
@@ -24,25 +24,21 @@ export class BookingComponent {
   isModalOpen = false;
   openedBox: string | null = null;
   
-
-
   constructor(
-    // private bookingService: ProductService,  private location: Location
+    private bookingService: BookingService
   ) {}
 
-  // openModal() {
-  //   this.isModalOpen = true;
-  // }
+  openModal() {
+    this.isModalOpen = true;
+  }
 
-  // closeModal() {
-  //   this.isModalOpen = false;
-  // }
-  // toggleBox(box: string): void {
-  //   this.openedBox = this.openedBox === box ? null : box;
-  // }
-  // goBack() {
-  //   this.location.back();
-  // }
+  closeModal() {
+    this.isModalOpen = false;
+  }
+  toggleBox(box: string): void {
+    this.openedBox = this.openedBox === box ? null : box;
+  }
+
 
   onSubmit(form: NgForm) {
     const formData: any = new FormData();
