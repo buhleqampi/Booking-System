@@ -9,6 +9,7 @@ import { ClientComponent } from './components/client/client.component';
 import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { TestCompComponent } from './test-comp/test-comp.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterComponent } from './components/register/register.component';
     ClientComponent,
     BusinessDashboardComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TestCompComponent
   ],
   imports: [
     BrowserModule,
