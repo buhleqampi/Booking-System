@@ -10,6 +10,7 @@ import { BusinessDashboardComponent } from './components/business-dashboard/busi
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TestCompComponent } from './test-comp/test-comp.component';
     BusinessDashboardComponent,
     LoginComponent,
     RegisterComponent,
-    TestCompComponent
+    TestCompComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
