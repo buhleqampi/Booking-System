@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { StaffComponent } from './components/staff/staff.component';
+import { CalenderComponent } from './components/calender/calender.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StaffComponent } from './components/staff/staff.component';
     LoginComponent,
     RegisterComponent,
     TestCompComponent,
-    StaffComponent
+    StaffComponent,
+    CalenderComponent
   ],
   imports: [
     BrowserModule,
