@@ -6,6 +6,7 @@ import { ClientComponent } from './components/client/client.component';
 import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HaircutsComponent } from './components/haircuts/haircuts.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'' , pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path : 'dashboard',component:BusinessDashboardComponent},
   {path : 'login', component: LoginComponent},
   {path : 'register',component:RegisterComponent},
+  {path : 'haircut',component:HaircutsComponent},
 ];
 
 @NgModule({
