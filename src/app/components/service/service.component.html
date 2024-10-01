@@ -1,0 +1,16 @@
+
+<div class="service-list" *ngIf="services.length > 0; else noServices">
+  <h2>Available Services</h2>
+  <ul>
+    <li *ngFor="let service of services" (click)="selectService(service)">
+      <h3>{{ service.name }}</h3>
+      <p>Duration: {{ service.duration }} mins</p>
+      <p>Price: {{ service.price }}</p>
+      <button (click)="bookService(service)">Book Now</button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noServices>
+  <p>No services available at the moment.</p>
+</ng-template>
