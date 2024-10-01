@@ -9,13 +9,9 @@ module.exports = {
     extend: {},
   },
   plugins: [
-<<<<<<< HEAD
-    require('flowbite/plugin') ,
-    require('preline/plugin'),
-=======
-    // require('flowbite/plugin') 
-    require('daisyui'),
->>>>>>> feature/Booking
+    require('flowbite/plugin'),
+    // require('daisyui'),
+    require('preline')
   ],
 }
 
