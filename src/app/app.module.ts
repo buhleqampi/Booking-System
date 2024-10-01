@@ -8,8 +8,8 @@ import { BookingComponent } from './components/booking/booking.component';
 import { ClientComponent } from './components/client/client.component';
 import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
+import { CalenderComponent } from './components/calender/calender.component';
 import { StaffComponent } from './components/staff/staff.component';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { StaffComponent } from './components/staff/staff.component';
     ClientComponent,
     BusinessDashboardComponent,
     LoginComponent,
-    RegisterComponent,
+    TestCompComponent,
+    CalenderComponent,
     TestCompComponent,
     StaffComponent
   ],

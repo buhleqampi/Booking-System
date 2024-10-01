@@ -2,13 +2,20 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    'node_modules/preline/dist/*.js',
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin') 
+<<<<<<< HEAD
+    require('flowbite/plugin') ,
+    require('preline/plugin'),
+=======
+    // require('flowbite/plugin') 
+    require('daisyui'),
+>>>>>>> feature/Booking
   ],
 }
 
