@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../../services/service/service.service';
 import { Service } from '../../interfaces/services';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-service-detail',
@@ -13,10 +14,7 @@ export class SingleServiceComponent implements OnInit {
   serviceId: string;
   service: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private serviceService: ServiceService
-  ) {
+  constructor(private route: ActivatedRoute, private serviceService: ServiceService, private location: Location) {
     this.serviceId = this.route.snapshot.params['id'];
   }
 
@@ -35,5 +33,9 @@ export class SingleServiceComponent implements OnInit {
         console.error('Error fetching service details:', error);
       }
     );
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

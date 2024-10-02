@@ -1,9 +1,13 @@
-<div *ngIf="service">
+<div class="service-details-container" *ngIf="service">
     <h2>{{ service.name }}</h2>
     <p>Description: {{ service.description }}</p>
     <p>Duration: {{ service.duration }} mins</p>
-    <p>Price: {{ service.price }}</p>
+    <p class="price">Price: R{{ service.price}}</p>
+
+    <img *ngIf="service.image" [src]="'data:image/jpeg;base64,' + service.image" alt="{{ service.name }} image"/>
 </div>
+
+<button (click)="goBack()" class="back-button">← Back</button>
 
 <div *ngIf="!service">
     <p>Loading service details...</p>
