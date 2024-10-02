@@ -10,6 +10,7 @@ import { BusinessDashboardComponent } from './components/business-dashboard/busi
 import { LoginComponent } from './components/login/login.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { CalenderComponent } from './components/calender/calender.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CalenderComponent } from './components/calender/calender.component';
     BusinessDashboardComponent,
     LoginComponent,
     TestCompComponent,
-    CalenderComponent
+    CalenderComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
