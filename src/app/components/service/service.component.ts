@@ -3,6 +3,7 @@ import { Service } from '../../interfaces/services';
 import { ServiceService } from '../../services/service/service.service';
 import { Booking } from '../../interfaces/booking';
 import { USER_ID } from '../../constants/constants.config';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service',
@@ -34,7 +35,8 @@ export class ServiceComponent implements OnInit {
         this.router.navigate(['/service', service._id])
     }
 
-    bookService(service: any): void {
+    bookService(service: any, event: Event): void {
+        event.stopPropagation();
         const buildBooking: Booking = {
             user: USER_ID,
             business: service.business,
