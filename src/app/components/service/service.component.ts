@@ -13,7 +13,7 @@ export class ServiceComponent implements OnInit {
     constructor(private serviceService: ServiceService) {}
 
     ngOnInit(): void {
-    this.fetchServices();
+        this.fetchServices();
     }
 
     fetchServices(): void {
