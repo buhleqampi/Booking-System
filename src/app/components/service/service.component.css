@@ -1,0 +1,70 @@
+/* General Styles */
+.service-list {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.service-list h2 {
+  text-align: center;
+}
+
+.service-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Service Item Styles */
+.service-list li {
+  border: 1px solid #e0e0e0;
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.service-list li:hover {
+  transform: translateY(-2px);
+}
+
+/* Button Styles */
+.service-list button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.service-list button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .service-list {
+    margin: 10px;
+  }
+
+  .service-list li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .service-list h2 {
+    font-size: 18px;
+  }
+
+  .service-list button {
+    width: 100%;
+    padding: 12px;
+  }
+}

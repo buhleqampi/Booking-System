@@ -1,11 +1,9 @@
-import { Business } from "./business";
 
-export interface Services {
+export interface Service {
+    id: string;
     name: string;
-    duration: number; 
+    duration: number;
     price: number;
-    business: Business[]; 
-    createdAt?: Date; 
-    updatedAt?: Date; 
-
+    businessId: string;
 }
+  

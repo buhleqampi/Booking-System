@@ -35,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration(),
+    provideHttpClient(withFetch()),
+    provideClientHydration(),
     BookingService,
   ],
   
