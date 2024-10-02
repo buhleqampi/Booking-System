@@ -4,12 +4,12 @@ import { LandingpageComponent } from './components/landingpage/landingpage.compo
 import { BookingComponent } from './components/booking/booking.component';
 import { ClientComponent } from './components/client/client.component';
 import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
-import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { StaffComponent } from './components/staff/staff.component';
+import { LoginComponent } from './components/login/login.component';  
 
 const routes: Routes = [
-  {path: '', redirectTo:'booking' , pathMatch: 'full'},
+  {path: '', redirectTo:'home' , pathMatch: 'full'},
   {path : 'home', component: LandingpageComponent},
   {path : 'booking', component: BookingComponent},
   {path : 'clients', component: ClientComponent},
@@ -17,6 +17,7 @@ const routes: Routes = [
   {path : 'login', component: LoginComponent},
   {path : 'register',component:RegisterComponent},
   {path : 'staff',component:StaffComponent},
+  {path : 'login', component: LoginComponent}
 ];
 
 @NgModule({
@@ -24,4 +25,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
