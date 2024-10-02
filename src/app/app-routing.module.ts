@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { StaffComponent } from './components/staff/staff.component';
 import { BookingsComponent } from './components/bookings/bookings.component';
+import { Test01Component } from './test01/test01.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'bookings' , pathMatch: 'full'},
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path : 'register',component:RegisterComponent},
   {path : 'staff',component:StaffComponent},
   {path : 'bookings',component:BookingsComponent},
+  {path : 'test1',component:Test01Component},
+  
 
 ];
 

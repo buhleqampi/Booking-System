@@ -11,7 +11,9 @@ import { LoginComponent } from './components/login/login.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { StaffComponent } from './components/staff/staff.component';
 import { BookingsComponent } from './components/bookings/bookings.component';
-import { BookingService } from './services/booking/booking.service';  
+import { BookingService } from './services/booking/booking.service';
+import { Test01Component } from './test01/test01.component';  
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { BookingService } from './services/booking/booking.service';
     LoginComponent,
     TestCompComponent,
     StaffComponent,
-    BookingsComponent
+    BookingsComponent,
+    Test01Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
