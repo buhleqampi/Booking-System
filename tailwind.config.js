@@ -9,9 +9,10 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    // require('flowbite/plugin'),
-    // require('daisyui'),
-    require('preline')
+    require('flowbite/plugin') ,
+    require('preline/plugin'),
+    // require('flowbite/plugin') 
+    require('daisyui'),
   ],
 }
 
