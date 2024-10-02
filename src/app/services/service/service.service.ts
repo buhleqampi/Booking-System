@@ -24,10 +24,6 @@ export class ServiceService {
         return this.http.get<Service>(`${this.serviceEndpoint}${id}`);
       }
     bookService(bookingData: Booking){
-        console.log(bookingData.business);
-        console.log(bookingData.user);
-        console.log(bookingData.service);
-        
         return this.http.post<Booking>(this.bookingEndpoint, bookingData);
     }
 }

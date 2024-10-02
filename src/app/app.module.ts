@@ -10,6 +10,7 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { SingleServiceComponent } from './components/single-service/single-service.component';
 import { CommonModule } from '@angular/common';
 import { ServiceComponent } from './components/service/service.component';
+import { BusinessViewComponent } from './components/business-view/business-view.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServiceComponent } from './components/service/service.component';
     Test01Component,
     SingleServiceComponent,
     ServiceComponent,
+    BusinessViewComponent,
   ],
   imports: [
     BrowserModule,
