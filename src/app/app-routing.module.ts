@@ -6,9 +6,7 @@ import { SingleServiceComponent } from './components/single-service/single-servi
 import { ServiceComponent } from './components/service/service.component';
 
 const routes: Routes = [
-  {path: '', redirectTo:'bookings' , pathMatch: 'full'},
-  {path : 'bookings',component:BookingsComponent},
-  {path : 'test1',component:Test01Component},
+  {path: '', redirectTo:'service' , pathMatch: 'full'},
   {path: 'service', component:ServiceComponent},
   {path: 'service/:id', component: SingleServiceComponent},
   
