@@ -10,6 +10,8 @@ import { BusinessDashboardComponent } from './components/business-dashboard/busi
 import { LoginComponent } from './components/login/login.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { StaffComponent } from './components/staff/staff.component';
+import { BookingsComponent } from './components/bookings/bookings.component';
+import { BookingService } from './services/booking/booking.service';  
 
 @NgModule({
   declarations: [
@@ -20,15 +22,18 @@ import { StaffComponent } from './components/staff/staff.component';
     BusinessDashboardComponent,
     LoginComponent,
     TestCompComponent,
-    StaffComponent
+    StaffComponent,
+    BookingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    BookingService,
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

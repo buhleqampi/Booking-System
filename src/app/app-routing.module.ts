@@ -7,9 +7,10 @@ import { BusinessDashboardComponent } from './components/business-dashboard/busi
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { StaffComponent } from './components/staff/staff.component';
+import { BookingsComponent } from './components/bookings/bookings.component';
 
 const routes: Routes = [
-  {path: '', redirectTo:'booking' , pathMatch: 'full'},
+  {path: '', redirectTo:'bookings' , pathMatch: 'full'},
   {path : 'home', component: LandingpageComponent},
   {path : 'booking', component: BookingComponent},
   {path : 'clients', component: ClientComponent},
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path : 'login', component: LoginComponent},
   {path : 'register',component:RegisterComponent},
   {path : 'staff',component:StaffComponent},
+  {path : 'bookings',component:BookingsComponent},
+
 ];
 
 @NgModule({
