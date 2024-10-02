@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from '../../interfaces/services';
 import { ServiceService } from '../../services/service/service.service';
-import { Router } from '@angular/router';
+import { Booking } from '../../interfaces/booking';
+import { USER_ID } from '../../constants/constants.config';
 
 @Component({
   selector: 'app-service',
@@ -33,6 +34,13 @@ export class ServiceComponent implements OnInit {
     }
 
     bookService(service: Service): void {
-        return;
+        const buildBooking: Booking = {
+            user: USER_ID,
+            business: service.businessId,
+            service: service.id,
+            staff: "66fc0546fc87c0563f22d6e0",
+            date: Date.now().toString(),
+            time: ""
+        }
     }
 }

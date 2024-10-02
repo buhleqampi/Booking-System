@@ -1,13 +1,11 @@
 import { Client } from "./client";
-import { BookingService } from "../services/booking/booking.service";
+import { Service } from "./services";
 
 export interface Booking {
-    name: string;
-    address: string;
-    contact?: string;
-    owner?: Client[]; 
-    description?: string;
-    logo?: string;
-    services?: BookingService []; 
-
+    user: String,
+    business: String,
+    service: String,
+    staff: String,
+    date: String,
+    time: String
 }

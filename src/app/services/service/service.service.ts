@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Service } from '../../interfaces/services';
+import { Booking } from '../../interfaces/booking';
 
 @Injectable({
   providedIn: 'root',
@@ -21,4 +22,7 @@ export class ServiceService {
     getServiceById(id: string): Observable<any> {
         return this.http.get<Service>(`${this.servicesEndpoint}${id}`);
       }
+    bookService(bookingData: Booking){
+        return this.http.post<Booking>(this.apiUrl, bookingData);
+    }
 }
