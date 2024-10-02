@@ -21,6 +21,7 @@ export class ServiceComponent implements OnInit {
     fetchServices(): void {
     this.serviceService.getServices().subscribe(
         (data) => {
+            // console.log(data)
             this.services = data;
         },
         (error) => {
@@ -33,14 +34,20 @@ export class ServiceComponent implements OnInit {
         this.router.navigate(['/service', service._id])
     }
 
-    bookService(service: Service): void {
+    bookService(service: any): void {
         const buildBooking: Booking = {
             user: USER_ID,
-            business: service.businessId,
-            service: service.id,
+            business: service.business,
+            service: service._id,
             staff: "66fc0546fc87c0563f22d6e0",
-            date: Date.now().toString(),
-            time: ""
-        }
+            date: new Date().toISOString(),
+            time: "14:30"
+        };
+
+        this.serviceService.bookService(buildBooking).subscribe(
+            (res) => {
+                console.log(res);
+            }
+        );
     }
 }

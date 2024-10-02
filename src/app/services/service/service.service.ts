@@ -9,20 +9,25 @@ import { Booking } from '../../interfaces/booking';
   providedIn: 'root',
 })
 export class ServiceService {
-    private servicesEndpoint = 'http://localhost:3000/api/services/';
+    private serviceEndpoint = 'http://localhost:3000/api/services/';
+    private bookingEndpoint = 'http://localhost:3000/api/bookings/'
 
     constructor(private http: HttpClient) {}
 
     getServices(): Observable<Service[]> {
-        return this.http.get<{ services: Service[] }>(`${this.servicesEndpoint}all/`).pipe(
+        return this.http.get<{ services: Service[] }>(`${this.serviceEndpoint}all/`).pipe(
             map((response) => response.services) // Extract the services array from the API response
         );
     }
 
     getServiceById(id: string): Observable<any> {
-        return this.http.get<Service>(`${this.servicesEndpoint}${id}`);
+        return this.http.get<Service>(`${this.serviceEndpoint}${id}`);
       }
     bookService(bookingData: Booking){
-        return this.http.post<Booking>(this.apiUrl, bookingData);
+        console.log(bookingData.business);
+        console.log(bookingData.user);
+        console.log(bookingData.service);
+        
+        return this.http.post<Booking>(this.bookingEndpoint, bookingData);
     }
 }
