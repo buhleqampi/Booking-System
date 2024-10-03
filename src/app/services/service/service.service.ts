@@ -14,7 +14,7 @@ export class ServiceService {
 
     getServices(): Observable<Service[]> {
         return this.http.get<{ services: Service[] }>(`${this.servicesEndpoint}all/`).pipe(
-            map((response) => response.services) // Extract the services array from the API response
+            map((response) => response.services) 
         );
     }
 
