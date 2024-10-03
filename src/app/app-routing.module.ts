@@ -18,8 +18,6 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   {path: 'receipts', component: HaircutsComponent},
  
-  
-
 ];
 
 @NgModule({
