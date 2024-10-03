@@ -13,6 +13,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { HomeComponent } from './components/home/home.component';
 import { HaircutsComponent } from './components/haircuts/haircuts.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { HaircutsComponent } from './components/haircuts/haircuts.component';
     ServiceComponent,
     HomeComponent,
     HeaderComponent,
-    HaircutsComponent
+    HaircutsComponent,
   ],
   imports: [
     BrowserModule,
