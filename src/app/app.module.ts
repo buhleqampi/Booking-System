@@ -11,6 +11,8 @@ import { SingleServiceComponent } from './components/single-service/single-servi
 import { CommonModule } from '@angular/common';
 import { ServiceComponent } from './components/service/service.component';
 import { HomeComponent } from './components/home/home.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     CommonModule,
+    FullCalendarModule
   ],
   providers: [
     provideClientHydration(),

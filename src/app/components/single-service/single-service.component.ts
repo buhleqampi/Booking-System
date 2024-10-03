@@ -24,14 +24,15 @@ export class SingleServiceComponent implements OnInit {
 
 
   fetchService(): void {
-    this.serviceService.getServiceById(this.serviceId).subscribe(
-      (data) => {
+    this.serviceService.getServiceById(this.serviceId).subscribe({
+      next: (data: any) => {
         console.log(data.service)
         this.service = data.service;
-      },
-      (error) => {
-        console.error('Error fetching service details:', error);
+      },error: (err: any) => {
+        console.error('Error fetching service details:', err);
       }
+    }
+      
     );
   }
 

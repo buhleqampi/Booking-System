@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* header toolbar section */
+.fc .fc-button-group {
+    display: inline-flex;
+    position: relative;
+    vertical-align: middle;
+    gap: 2px;
+}
+.fc .fc-button{
+    font-size: .7em;
+    border-radius: 0.45em;
+
+    }
+.fc .fc-toolbar-title {
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+/* table head */
+thead{
+    background-color: aliceblue;
+}
+/* table body */
+.fc table {
+    font-size: .8em;
+    border-radius: .3em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
