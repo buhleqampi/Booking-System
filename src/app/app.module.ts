@@ -11,6 +11,8 @@ import { SingleServiceComponent } from './components/single-service/single-servi
 import { CommonModule } from '@angular/common';
 import { ServiceComponent } from './components/service/service.component';
 import { HomeComponent } from './components/home/home.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HaircutsComponent } from './components/haircuts/haircuts.component';
 
 
@@ -28,7 +30,9 @@ import { HaircutsComponent } from './components/haircuts/haircuts.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     CommonModule,
+    FullCalendarModule
   ],
   providers: [
     provideClientHydration(),
