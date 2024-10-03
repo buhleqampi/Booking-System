@@ -5,23 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookingsComponent } from './components/bookings/bookings.component';
 import { BookingService } from './services/booking/booking.service';
-import { Test01Component } from './test01/test01.component';  
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { SingleServiceComponent } from './components/single-service/single-service.component';
+import { CommonModule } from '@angular/common';
+import { ServiceComponent } from './components/service/service.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookingsComponent,
-    Test01Component
+    SingleServiceComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
   ],
   providers: [
     provideClientHydration(),
-    // provideHttpClient(withFetch()),
+    provideHttpClient(withFetch()),
     provideClientHydration(),
     BookingService,
   ],

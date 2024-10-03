@@ -21,7 +21,7 @@ export class BookingsComponent implements OnInit {
     this.bookingService.getAllBookings().subscribe({
       next: (data: any) => {
         this.bookings = data.bookings;
-        console.log(data)
+        // console.log(data)
       },
       error: (error) => {
         console.error('Error fetching bookings:', error);

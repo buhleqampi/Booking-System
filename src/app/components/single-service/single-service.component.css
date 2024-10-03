@@ -1,0 +1,78 @@
+/* service-detail.component.css */
+
+/* Container for the service details */
+.service-details-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-details-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.service-details-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Style the price to stand out */
+.service-details-container .price {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.3rem;
+}
+
+/* Style the image */
+.service-details-container img {
+    max-width: 100%;
+    height: auto; /* Keep the aspect ratio */
+    display: block;
+    margin: 20px 0; /* Space between image and other content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button:focus {
+    outline: none;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .service-details-container {
+        padding: 15px;
+    }
+
+    .service-details-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-details-container p {
+        font-size: 1rem;
+    }
+
+    .service-details-container .price {
+        font-size: 1.2rem;
+    }
+}
