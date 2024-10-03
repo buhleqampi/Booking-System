@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HaircutsComponent } from './components/haircuts/haircuts.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { HaircutsComponent } from './components/haircuts/haircuts.component';
     HomeComponent,
     HeaderComponent,
     HaircutsComponent,
+    BookingComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
