@@ -3,7 +3,8 @@ import { Service } from '../../interfaces/services';
 import { ServiceService } from '../../services/service/service.service';
 import { Booking } from '../../interfaces/booking';
 import { USER_ID } from '../../constants/constants.config';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-service',
@@ -12,24 +13,27 @@ import { Router } from '@angular/router';
 })
 export class ServiceComponent implements OnInit {
     services: Service[] = [];
+    businessId: any;
 
-    constructor(private serviceService: ServiceService, private router: Router) {}
+    constructor(private serviceService: ServiceService, private router: Router, private route: ActivatedRoute, private location: Location) {
+        this.businessId = this.route.snapshot.params['id'];
+    }
 
     ngOnInit(): void {
         this.fetchServices();
     }
 
     fetchServices(): void {
-    this.serviceService.getServices().subscribe(
-        (data) => {
-            // console.log(data)
-            this.services = data;
-        },
-        (error) => {
-            console.error('Error fetching services', error);
-        }
-    );
+        this.serviceService.getServicesByBusinessId(this.businessId).subscribe(
+            (data) => {
+                this.services = data;
+            },
+            (error) => {
+                console.error('Error fetching services', error);
+            }
+        );
     }
+
 
     selectService(service: any): void {
         this.router.navigate(['/service', service._id])
@@ -52,4 +56,8 @@ export class ServiceComponent implements OnInit {
             }
         );
     }
+
+    goBack(): void {
+        this.location.back();
+      }
 }
