@@ -11,6 +11,7 @@ import { SingleServiceComponent } from './components/single-service/single-servi
 import { CommonModule } from '@angular/common';
 import { ServiceComponent } from './components/service/service.component';
 import { HomeComponent } from './components/home/home.component';
+import { HaircutsComponent } from './components/haircuts/haircuts.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './components/home/home.component';
     SingleServiceComponent,
     ServiceComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    HaircutsComponent
   ],
   imports: [
     BrowserModule,
