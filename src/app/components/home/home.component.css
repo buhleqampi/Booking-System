@@ -1,0 +1,42 @@
+.services-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .services-grid {
+    display: flex;
+    gap: 20px;  /* Adds space between the cards */
+    justify-content: space-between;
+    flex-wrap: wrap;  /* Ensures the cards wrap on smaller screens */
+  }
+  
+  .service-card {
+    flex: 1 1 calc(50% - 20px); /* Each card takes up 50% of the width minus the gap */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 250px;  /* Ensures cards don't get too small */
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    color: #555;
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 640px) {
+    .services-grid {
+      flex-direction: column; /* Stack the cards vertically */
+    }
+    
+    .service-card {
+      flex: 1 1 100%; /* Full width on smaller screens */
+    }
+  }
+  
