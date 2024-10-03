@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Services } from '../../interfaces/services';
 import { ServiceService } from '../../services/service/service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service',
@@ -10,7 +11,7 @@ import { ServiceService } from '../../services/service/service.service';
 export class ServiceComponent implements OnInit {
     services: Services[] = [];
 
-    constructor(private serviceService: ServiceService) {}
+    constructor(private serviceService: ServiceService, private router: Router) {}
 
     ngOnInit(): void {
         this.fetchServices();
@@ -27,8 +28,8 @@ export class ServiceComponent implements OnInit {
     );
     }
 
-    selectService(service: Services): void {
-        return;
+    selectService(service: any): void {
+        this.router.navigate(['/service', service._id])
     }
 
     bookService(service: Services): void {

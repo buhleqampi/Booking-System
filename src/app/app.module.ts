@@ -3,15 +3,16 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingpageComponent } from './components/landingpage/landingpage.component';
-import { BookingComponent } from './components/booking/booking.component';
-import { ClientComponent } from './components/client/client.component';
-import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
-import { LoginComponent } from './components/login/login.component';
-import { TestCompComponent } from './test-comp/test-comp.component';
-import { StaffComponent } from './components/staff/staff.component';
 import { HeaderComponent } from './components/header/header.component';
-import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
+import { BookingsComponent } from './components/bookings/bookings.component';
+import { BookingService } from './services/booking/booking.service';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { SingleServiceComponent } from './components/single-service/single-service.component';
+import { CommonModule } from '@angular/common';
+import { ServiceComponent } from './components/service/service.component';
+import { HomeComponent } from './components/home/home.component';
+import { HaircutsComponent } from './components/haircuts/haircuts.component';
+import { BookingComponent } from './components/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,15 @@ import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component
     BottomNavComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch()),
+    provideClientHydration(),
+    BookingService,
+>>>>>>> 6929655858e650c6f3594136aaa817c083cf3a42
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,19 +1,24 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingpageComponent } from './components/landingpage/landingpage.component';
-import { BookingComponent } from './components/booking/booking.component';
-import { ClientComponent } from './components/client/client.component';
-import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
-import { LoginComponent } from './components/login/login.component';  
+import { BookingsComponent } from './components/bookings/bookings.component';
+import { SingleServiceComponent } from './components/single-service/single-service.component';
+import { ServiceComponent } from './components/service/service.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HaircutsComponent } from './components/haircuts/haircuts.component';
+
+
 
 const routes: Routes = [
   {path: '', redirectTo:'home' , pathMatch: 'full'},
-  {path : 'home', component: LandingpageComponent},
-  {path : 'booking', component: BookingComponent},
-  {path : 'clients', component: ClientComponent},
-  {path : 'dashboard',component:BusinessDashboardComponent},
-  {path : 'login', component: LoginComponent}
+  {path : 'bookings',component:BookingsComponent},
+  {path: 'service', component:ServiceComponent},
+  {path: 'service/:id', component: SingleServiceComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'header', component: HeaderComponent},
+  {path: 'receipts', component: HaircutsComponent},
+ 
 ];
 
 @NgModule({
@@ -21,3 +26,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
