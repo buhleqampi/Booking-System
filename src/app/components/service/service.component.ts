@@ -9,30 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./service.component.css'],
 })
 export class ServiceComponent implements OnInit {
-    services: Service[] = [];
+    services: any = [];
 
-    constructor(private serviceService: ServiceService, private router: Router) {}
+    constructor(private service: ServiceService) {}
 
     ngOnInit(): void {
-        this.fetchServices();
+        this.getServices();
     }
-
-    fetchServices(): void {
-    this.serviceService.getServices().subscribe(
-        (data) => {
-            this.services = data;
+    getServices() {
+      this.service.getServices().subscribe({
+        next: (data) => {
+          this.services = data.slice(-8);
+          console.log(this.services);
         },
-        (error) => {
-            console.error('Error fetching services', error);
+        error: (err) => {
+          console.error('Error fetching services', err);
         }
-    );
+      });
     }
-
-    selectService(service: any): void {
-        this.router.navigate(['/service', service._id])
-    }
-
-    bookService(service: Service): void {
-        return;
-    }
+    
 }

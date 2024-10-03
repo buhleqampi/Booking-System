@@ -1,15 +1,23 @@
-<div class="service-list" *ngIf="services.length > 0; else noServices">
-    <h2>Available Services</h2>
-    <ul>
-        <li *ngFor="let service of services" (click)="selectService(service)">
-            <h3>{{ service.name }}</h3>
-            <p>Duration: {{ service.duration }} mins</p>
-            <p>Price: {{ service.price }}</p>
-            <button (click)="bookService(service)">Book Now</button>
-        </li>
-    </ul>
-</div>
-
-<ng-template #noServices>
-    <p>No services available at the moment.</p>
-</ng-template>
+<main class="pt-10 mt-5">
+    <section class="py-10" id="services">
+        <div class="container w-9/12 mx-auto px-4 ">
+            <h2 class= "block text-xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white justify-center">Our Services</h2>
+            <div class="flex flex-wrap justify-center gap-4 ">
+                <div class="col-6 gap-5" *ngFor="let item of services">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden h-40"  routerLink="/service/{{item._id}}">
+                                <img src="{{item.image}}" alt="wheat flour grinding"
+                                    class="w-full h-64 object-cover">
+                                    <h3 class="text-xl font-medium text-black-800 mb-2">{{item.name}}</h3>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-xl font-medium text-red-800 mb-2">R{{item.price}}</h3>
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                        <a></a>
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>

@@ -11,31 +11,39 @@ import { Location } from '@angular/common';
   styleUrls: ['./single-service.component.css']
 })
 export class SingleServiceComponent implements OnInit {
-  serviceId: string;
-  service: any;
-
-  constructor(private route: ActivatedRoute, private serviceService: ServiceService, private location: Location) {
-    this.serviceId = this.route.snapshot.params['id'];
-  }
+  service: any; // To store the service details
+  data:any
+  constructor(
+    private route: ActivatedRoute,  // To get route params
+    private serviceService: ServiceService  // To make service API call
+  ) {}
 
   ngOnInit(): void {
-    this.fetchService();
+    this.getService();
   }
 
-
-  fetchService(): void {
-    this.serviceService.getServiceById(this.serviceId).subscribe(
-      (data) => {
-        console.log(data.service)
-        this.service = data.service;
-      },
-      (error) => {
-        console.error('Error fetching service details:', error);
-      }
-    );
+  getService() {
+    // Retrieve the service id from the URL parameters
+    const serviceId = this.route.snapshot.paramMap.get('id');
+    
+    if (serviceId) {
+      this.serviceService.getServiceById(serviceId).subscribe({
+        next: (data) => {
+          this.service = data;
+          this.data = data
+          console.log(this.service);
+        },
+        error: (err) => {
+          console.error('Error fetching service details', err);
+        }
+      });
+    } else {
+      console.error('No service ID provided in the route.');
+    }
   }
 
-  goBack(): void {
-    this.location.back();
+  goBack() {
+    // Logic to go back to the previous page
+    window.history.back();
   }
 }
