@@ -1,1 +1,13 @@
-<p>business-view works!</p>
+<div class="business-list-container" *ngIf="businesses.length > 0; else noBusinesses">
+    <h2>Available Businesses</h2>
+    <ul>
+        <li *ngFor="let business of businesses" (click)="goToServices(business._id)">
+            <h3>Name: {{ business.name }}</h3>
+            <h4>Owner: {{ business.owner.name }}</h4>
+        </li>
+    </ul>
+</div>
+
+<ng-template #noBusinesses>
+    <p>No businesses available at the moment.</p>
+</ng-template>
