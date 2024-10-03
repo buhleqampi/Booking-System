@@ -5,11 +5,9 @@ import { SingleServiceComponent } from './components/single-service/single-servi
 import { ServiceComponent } from './components/service/service.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-// import { BookingComponent } from './components/booking/booking.component';
-// import { ClientComponent } from './components/client/client.component';
-// import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
-// import { LoginComponent } from './components/login/login.component';
-// import { StaffComponent } from './components/staff/staff.component';
+import { HaircutsComponent } from './components/haircuts/haircuts.component';
+
+
 
 const routes: Routes = [
   {path: '', redirectTo:'home' , pathMatch: 'full'},
@@ -18,14 +16,8 @@ const routes: Routes = [
   {path: 'service/:id', component: SingleServiceComponent},
   {path: 'home', component: HomeComponent},
   {path: 'header', component: HeaderComponent},
-  // {path : 'booking', component: BookingComponent},
-  // {path : 'clients', component: ClientComponent},
-  // {path : 'dashboard',component:BusinessDashboardComponent},
-  // {path : 'login', component: LoginComponent},
-  // {path : 'staff',component:StaffComponent},
-  // {path : 'login', component: LoginComponent}
-  
-
+  {path: 'receipts', component: HaircutsComponent},
+ 
 ];
 
 @NgModule({

@@ -13,6 +13,8 @@ import { ServiceComponent } from './components/service/service.component';
 import { HomeComponent } from './components/home/home.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HaircutsComponent } from './components/haircuts/haircuts.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SingleServiceComponent,
     ServiceComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    HaircutsComponent,
   ],
   imports: [
     BrowserModule,

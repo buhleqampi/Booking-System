@@ -18,7 +18,7 @@ export class HomeComponent {
     getServices() {
       this.service.getServices().subscribe({
         next: (data) => {
-          this.services = data.slice(-4);
+          this.services = data.slice(-8);
           console.log(this.services);
         },
         error: (err) => {
