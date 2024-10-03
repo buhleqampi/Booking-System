@@ -18,6 +18,7 @@ import { BookingComponent } from './components/booking/booking.component';
 import { RegisterComponent } from './components/register/register.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
