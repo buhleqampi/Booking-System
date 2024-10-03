@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookingsComponent } from './components/bookings/bookings.component';
 import { SingleServiceComponent } from './components/single-service/single-service.component';
 import { ServiceComponent } from './components/service/service.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 // import { BookingComponent } from './components/booking/booking.component';
 // import { ClientComponent } from './components/client/client.component';
 // import { BusinessDashboardComponent } from './components/business-dashboard/business-dashboard.component';
@@ -10,10 +12,12 @@ import { ServiceComponent } from './components/service/service.component';
 // import { StaffComponent } from './components/staff/staff.component';
 
 const routes: Routes = [
-  {path: '', redirectTo:'bookings' , pathMatch: 'full'},
+  {path: '', redirectTo:'home' , pathMatch: 'full'},
   {path : 'bookings',component:BookingsComponent},
   {path: 'service', component:ServiceComponent},
   {path: 'service/:id', component: SingleServiceComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'header', component: HeaderComponent},
   // {path : 'booking', component: BookingComponent},
   // {path : 'clients', component: ClientComponent},
   // {path : 'dashboard',component:BusinessDashboardComponent},
